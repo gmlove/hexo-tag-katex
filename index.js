@@ -22,7 +22,7 @@ hexo.extend.filter.register('after_post_render', function(data){
 	data.content = util.htmlTag('link',{
 		rel: 'stylesheet',
 		type: 'text/css',
-		href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'
+		href: hexo.config.katex.host + 'katex.min.css' || 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'
 	}) + data.content;
 
 	return data;
